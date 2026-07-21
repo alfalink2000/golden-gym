@@ -59,14 +59,15 @@ export default function About() {
           </div>
         </div>
 
-        <div className="relative h-[600px] w-full glass-card p-2 hidden lg:block">
+        <div className="relative h-[400px] sm:h-[500px] lg:h-[600px] w-full glass-card p-2 overflow-hidden">
           <img
             className="w-full h-full object-cover filter grayscale contrast-125"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEOj3LepWxo_ECyYqEHKMdZ91EY0sFzGMuWoL1mHOTajbSaaTw_TIhXVz5KNvsOBdiorBC08uz_YPwQCsAnRMlMbIL4PgSc1kJEWlcyCqU20fVKAhJmVktE4nEXiQEW0yCoraa5DdBfLBvJtlyC5KDEY8_zFvbePxKItaxOnYArez6oTZgazPXJknIQqSgP7HJIpZklVcAoZVd4jYz993DIYug8TbiR6BAJqrTQFtnzQxcPqxqqyug"
             alt="Entrenador Principal - Mr. México 1987"
           />
-          <div className="absolute bottom-6 left-6 right-6 bg-background/90 backdrop-blur-md border border-outline-variant/50 p-4">
-            <p className="text-label-lg text-primary-container uppercase tracking-widest mb-1 font-semibold">
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+          <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 bg-background/90 backdrop-blur-md border border-outline-variant/50 p-3 sm:p-4">
+            <p className="text-label-sm sm:text-label-lg text-primary-container uppercase tracking-widest mb-1 font-semibold">
               Entrenador Principal
             </p>
             <p className="text-headline-md font-display font-bold text-primary">
