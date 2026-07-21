@@ -1,15 +1,18 @@
 export default function Hero() {
+  const heroImageUrl =
+    'https://lh3.googleusercontent.com/aida-public/AB6AXuBGPpQYOJlUKCHicKH_2EJvEdko8ZX5jiqtm9be7zt5KfEG-D2GUpUTRtqKZZS4NeKJAzRk3crsBBS-rJdMqX5hXP0xIpDaxonpeNTeIRBi08f5vR4JrwJx3CtDhxwCEew8FrmA1TGLvDfH9xMo6a0EaTcAV8R_IzybWv3G35dAu8DIcCHAqAVFcs179CaUklI5v7FoINzb34HEO46c1uhASby9L5vo8lZIZICxfLZo1JeBknKmRdQf'
+
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center pt-16 pb-16 px-5 md:px-16"
+      className="relative min-h-screen flex items-center justify-center pt-16 pb-16 px-5 md:px-16 overflow-hidden"
       id="inicio"
     >
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center z-0 opacity-40 mix-blend-luminosity"
-        style={{
-          backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGPpQYOJlUKCHicKH_2EJvEdko8ZX5jiqtm9be7zt5KfEG-D2GUpUTRtqKZZS4NeKJAzRk3crsBBS-rJdMqX5hXP0xIpDaxonpeNTeIRBi08f5vR4JrwJx3CtDhxwCEew8FrmA1TGLvDfH9xMo6a0EaTcAV8R_IzybWv3G35dAu8DIcCHAqAVFcs179CaUklI5v7FoINzb34HEO46c1uhASby9L5vo8lZIZICxfLZo1JeBknKmRdQf')`,
-        }}
+      <img
+        src={heroImageUrl}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-40 mix-blend-luminosity pointer-events-none"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent z-10" />
 

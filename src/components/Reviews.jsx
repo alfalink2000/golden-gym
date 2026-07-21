@@ -60,7 +60,7 @@ function ReviewCard({ review }) {
     .toUpperCase()
 
   return (
-    <div className="glass-card p-6 gold-glow transition-all duration-300 flex flex-col gap-4 min-w-[320px] max-w-[400px] snap-start">
+    <div className="glass-card p-6 gold-glow transition-all duration-300 flex flex-col gap-4">
       <StarRating count={review.rating} />
 
       <p className="text-body-md text-on-surface-variant flex-1 italic">
@@ -68,20 +68,20 @@ function ReviewCard({ review }) {
       </p>
 
       <div className="flex items-center gap-3 pt-4 border-t border-outline-variant/20">
-        <div className="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center">
+        <div className="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
           <span className="text-label-lg font-bold text-primary-container">
             {initials}
           </span>
         </div>
-        <div>
-          <p className="text-label-lg font-semibold text-primary">
+        <div className="min-w-0">
+          <p className="text-label-lg font-semibold text-primary truncate">
             {review.name}
           </p>
           {review.role && (
             <p className="text-label-sm text-on-surface-variant">{review.role}</p>
           )}
         </div>
-        <span className="ml-auto text-label-sm text-outline">{review.time}</span>
+        <span className="ml-auto text-label-sm text-outline shrink-0">{review.time}</span>
       </div>
     </div>
   )
@@ -89,7 +89,7 @@ function ReviewCard({ review }) {
 
 export default function Reviews() {
   return (
-    <section className="py-24 bg-surface-container-low overflow-hidden" id="resenas">
+    <section className="py-24 bg-surface-container-low" id="resenas">
       <div className="px-5 md:px-16 max-w-[1280px] mx-auto mb-12">
         <div className="text-center">
           <h2 className="text-headline-lg font-display font-bold text-primary mb-4">
@@ -101,9 +101,9 @@ export default function Reviews() {
         </div>
       </div>
 
-      {/* Scrolling Cards */}
-      <div className="overflow-x-auto pb-4 px-5 md:px-16 snap-x snap-mandatory">
-        <div className="flex gap-6 w-max">
+      {/* Review Cards Grid */}
+      <div className="px-5 md:px-16 max-w-[1280px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((review) => (
             <ReviewCard key={review.name} review={review} />
           ))}
